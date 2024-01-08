@@ -170,7 +170,6 @@ def show_post(post_id):
 
 @app.route('/new-post', methods=["GET", "POST"])
 @login_required
-@admin_only
 def add():
     blog = BlogForm()
     if blog.validate_on_submit():
